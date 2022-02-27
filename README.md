@@ -17,6 +17,8 @@ Basic CTF scan `nmap -oN=./nmap.txt -p- -sV -sC -vv <TARGET>`
 Find SSUID executables `find / -perm -u=s -type f 2>/dev/null`
 
 ### Break out of app to get shell access 
+[Tested and working](./Break_out_of_bins.md)
+#### Other lists
 https://gtfobins.github.io/
 
 ## Misc
