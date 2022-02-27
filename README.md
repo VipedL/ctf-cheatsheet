@@ -16,5 +16,16 @@ Basic CTF scan `nmap -oN=./nmap.txt -p- -sV -sC -vv <TARGET>`
 ## Linux
 Find SSUID executables `find / -perm -u=s -type f 2>/dev/null`
 
+### Break out of app to get shell access 
+https://gtfobins.github.io/
+
 ## Misc
-Upgrade reverse shell to proper tty `python3 -c 'import pty; pty.spawn("/bin/bash")'`
+Upgrade reverse shell to proper tty
+
+```
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+export TERM=xterm
+Ctrl + Z
+stty raw -echo; fg
+```
+
